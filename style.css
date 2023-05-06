@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cursor {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%, -50%);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 2px solid rgb(128, 63, 6);
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+}
+
+.cursor.nav-active {
+  background: rgb(255, 255, 255);
+  transform: scale(3);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: antiquewhite;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+}
+header h2 {
+  padding: 2rem;
+  z-index: 2;
+}
+#logo {
+  text-decoration: none;
+  font-family: "Darumadrop One", cursive;
+  color: rgb(128, 63, 6);
+  font-size: 5rem;
+}
+.search-form {
+  padding: 2rem;
+  display: flex;
+}
+
+.search-form input {
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border: 2px solid rgb(242, 138, 63);
+}
+
+.search-form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: rgb(242, 138, 63);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+
+.gallery-info p {
+  z-index: 2;
+}
+
+.gallery-info a {
+  color: brown;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color ease 300ms;
+  z-index: 2;
+}
+.gallery-info a:hover {
+  color: rgb(3, 1, 1);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0rem;
+  width: 80%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-btn {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  padding: 1rem 3rem;
+  background-color: rgb(242, 138, 63);
+  color: black;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
